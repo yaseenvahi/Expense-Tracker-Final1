@@ -1,0 +1,294 @@
+/* General Styles */
+.expense-tracker {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #f5f5f5, #ffebef); /* Gradient background */
+  background-image: url('../assets/homeback.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+/* Navbar Styling */
+.navbar {
+  height: 60px; /* Adjust height as needed */
+  background-color: #333; /* Navbar background color */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Main Content Container */
+.main-container {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
+  margin-top: 80px; /* Space for the fixed navbar */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+/* Header and Section Styling */
+.income-section,
+.daily-limit-section,
+.expense-input-section,
+.table-section {
+  margin-bottom: 20px;
+}
+
+/* Income and Expense Container Styling */
+.income-container,
+.expense-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 5%;
+  padding-top: 5%;
+  flex-direction: column;
+}
+
+/* Input and Button Styling */
+.income-inputs,
+.expense-inputs {
+  width: 100%;
+  max-width: 600px;
+}
+
+.income-section input,
+.expense-input-section input,
+.expense-input-section select {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  border-radius: 8px; /* More rounded corners */
+  border: 1px solid #ccc; /* Softer border color */
+  font-size: 16px;
+}
+
+.income-section button,
+.expense-input-section button {
+  padding: 12px 20px; /* Improved padding */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  background-color: #ff6f61; /* Softer button color */
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.income-section button:hover,
+.expense-input-section button:hover {
+  background-color: #ff4f4f; /* Darker on hover */
+}
+
+/* Table Styling */
+.table-section {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
+  margin-bottom: 20px;
+}
+
+.tableList {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row colors */
+}
+
+#delExp {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6666;
+  color: white;
+  cursor: pointer;
+}
+
+#delExp:hover {
+  background-color: #cc0000;
+}
+
+/* Summary Section Styling */
+.summary {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+.summary-item h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Chart Container Styling */
+.charts-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.charts {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.chart-container {
+  width: 30%;
+  min-width: 250px;
+  border-radius: 10px; /* Rounded corners for charts */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Font Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Image Box Styling */
+.image-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.animated-image {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.animated-image-container {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 250px;
+  height: auto;
+  z-index: 1000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .charts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image-box {
+    justify-content: center;
+  }
+}
+
+/* Button Styling */
+.add-btn {
+  margin-bottom: 10px;
+}
+
+.export-btn {
+  margin-top: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for category input field */
+.category-input-field {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+/* Styling for the Monthly Budget Container */
+.monthly-budget-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 550px;
+}
+
+/* Style for the Monthly Budget Label */
+.monthly-budget-container label {
+  width: 100%;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+/* Style for the Monthly Budget Input */
+.monthly-budget-container input {
+  width: 97%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 700px) {
+  .monthly-budget-container {
+    width: calc(100% - 20px);
+    padding: 0px;
+    margin-left: 0;
+  }
+
+  .monthly-budget-container input {
+    width: calc(100% - 20px);
+  }
+}

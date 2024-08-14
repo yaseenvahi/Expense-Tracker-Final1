@@ -1,0 +1,84 @@
+.video-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send the video to the back */
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* Increased width */
+  height: 50%; /* Increased height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.left-side {
+  flex: 1;
+  /* Additional styling if needed */
+}
+
+.right-side {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+  padding: 40px; /* Increased padding */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%; /* Ensuring the height matches the container */
+}
+
+.right-side h1 {
+  font-size: 2.5rem; /* Increased font size */
+  margin-bottom: 1.5rem;
+}
+
+.right-side .description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.explore-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem; /* Increased font size */
+  color: #fff;
+  background-color: #677eff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #5761f2;
+}

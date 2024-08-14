@@ -1,0 +1,57 @@
+/* Footer.css */
+
+.footer {
+    background-color: #333; /* Dark background color */
+    padding: 20px;
+    border-top: 1px solid #444; /* Darker border color for subtle contrast */
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for depth */
+  }
+  
+  .footer-content h2 {
+    margin: 0;
+    color: #fff; /* Light text color for header */
+    font-size: 1.5rem; /* Slightly larger font size */
+  }
+  
+  .footer-content p {
+    color: #bbb; /* Light grey text color for paragraph */
+    font-size: 1rem;
+    margin: 10px 0; /* Margin for spacing */
+  }
+  
+  .footer-links {
+    margin: 10px 0;
+  }
+  
+  .footer-links a {
+    color: #1e90ff; /* Bright blue link color */
+    text-decoration: none;
+    margin: 0 15px; /* Increased margin for spacing */
+    font-size: 1rem; /* Font size for better readability */
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social {
+    margin: 10px 0;
+  }
+  
+  .footer-social a {
+    color: #1e90ff; /* Bright blue social media link color */
+    text-decoration: none;
+    margin: 0 15px; /* Increased margin for spacing */
+    font-size: 1.5rem; /* Larger icon size */
+  }
+  
+  .footer-social a:hover {
+    color: #87cefa; /* Lighter blue on hover */
+  }
+  
+  .footer-social a svg {
+    vertical-align: middle; /* Align icons with text */
+  }
+  
